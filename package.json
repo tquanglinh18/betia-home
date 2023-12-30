@@ -1,0 +1,12 @@
+{
+  "name": "betia_home",
+  "version": "0.0.1",
+  "description": "Betia Home",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx tailwindcss -i ./styles.css -o ./assets/css/styles.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
