@@ -9,3 +9,9 @@
 
 @media screen and (min-width: 1289px) {
 }
+
+.img-app {
+    background-image: url('../images/ic_betia_1.webp.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}

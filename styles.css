@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .container-page {
+        @apply max-w-[1260px] mx-auto p-4
+    }
+}
+
+@layer components {
+  .page-name { 
+    @apply font-bold text-[#121D26] mb-[1%] text-[32px] lg:text-[50px];
+  }
+ 
+  .page-desc {
+    @apply font-medium text-[#212529] text-[20px] lg:text-[24px];
+  }
+
+  .app-slogan {
+    @apply font-medium text-[#31AADF] mb-4 text-base;
+  }
+
+  .app-name {
+    @apply font-bold text-[#121D26] mb-8 text-[24px] lg:text-[30px]
+  }
+
+  .app-desc { 
+    @apply text-[#121D26] text-[24px] lg:text-[20px]
+  }
+}
