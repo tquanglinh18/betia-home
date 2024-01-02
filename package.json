@@ -2,11 +2,14 @@
   "name": "betia_home",
   "version": "0.0.1",
   "description": "Betia Home",
+  "license": "MIT",
   "main": "index.html",
   "scripts": {
-    "start": "npx tailwindcss -i ./styles.css -o ./assets/css/styles.css --watch"
+    "start": "npx tailwindcss -i ./styles.css -o ./assets/css/style.css --watch",
+    "runSass": "sass --watch ./assets/scss/styles.scss ./assets/css/styles-scss.css --no-source-map"    
   },
   "dependencies": {
+    "sass": "^1.69.6",
     "tailwindcss": "^3.4.0"
   }
 }

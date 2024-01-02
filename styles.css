@@ -3,29 +3,59 @@
 @tailwind utilities;
 
 @layer base {
-    .container-page {
-        @apply max-w-[1260px] mx-auto p-4
-    }
-}
+  .container-page {
+    @apply max-w-[1260px] mx-auto p-4;
+  }
 
-@layer components {
-  .page-name { 
+  .page-name {
     @apply font-bold text-[#121D26] mb-[1%] text-[32px] lg:text-[50px];
   }
- 
+
   .page-desc {
     @apply font-medium text-[#212529] text-[20px] lg:text-[24px];
   }
+}
 
-  .app-slogan {
+@layer components {
+
+  .app-item {
+    @apply w-full flex flex-col md:flex-row bg-[#F8F8F8] rounded-[50px] mb-[4%]
+  }
+
+  .app-item__banner {
+    @apply w-full md:w-[50%]
+  } 
+  
+  .app-item__banner-img {
+    @apply w-full aspect-6/5 object-cover
+  }
+
+  .app-item__detail {
+    @apply w-full md:w-[50%] p-[10%] md:p-[4%] flex flex-col justify-between text-[#121D26]
+  }
+
+  .app-item__detail--slogan {
     @apply font-medium text-[#31AADF] mb-4 text-base;
   }
 
-  .app-name {
-    @apply font-bold text-[#121D26] mb-8 text-[24px] lg:text-[30px]
+  .app-item__detail--name {
+    @apply font-bold mb-8 text-[24px] lg:text-[30px];
   }
 
-  .app-desc { 
-    @apply text-[#121D26] text-[24px] lg:text-[20px]
+  .app-item__detail--desc {
+    @apply text-base lg:text-[20px];
   }
+
+  .app-item__detail-download {
+    @apply flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4
+  }
+
+  .app-item__detail-download-option {
+    @apply flex justify-center items-center py-2 px-6 rounded-[50px] bg-white
+  }
+
+  .app-item__detail-download-option--name {
+    @apply px-2 font-bold text-[14px] lg:text-base
+  }
+  
 }
