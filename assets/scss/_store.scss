@@ -1,0 +1,85 @@
+@import "reponsive";
+
+$textMainColor: #121d26;
+$textDescColor: #212529;
+$textCostColor: #a0a5a8;
+
+body {
+  background-color: #ccc;
+}
+
+.banner-slick {
+  margin-bottom: 6%;
+  margin-top: 6%;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 32px;
+  column-gap: 32px;
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.rotate-90 {
+  rotate: 90deg;
+}
+
+.rotate--90 {
+  rotate: -90deg;
+
+}
+
+.products-item {
+  background-color: #fff;
+  border-radius: 50px;
+
+  &__banner {
+    width: 100%;
+    aspect-ratio: 1/1;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+
+      object-fit: cover;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+  }
+
+  &__detail {
+    padding: 32px;
+    &--name {
+      color: $textMainColor;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    &--desc {
+      color: $textMainColor;
+      margin-bottom: 24px;
+    }
+
+    &--price {
+      display: flex;
+      gap: 8px;
+      align-items: end;
+      &__sale {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &__cost {
+        color: $textCostColor;
+        font-size: 16px;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

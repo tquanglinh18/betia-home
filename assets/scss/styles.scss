@@ -1,6 +1,8 @@
 @import "reponsive";
 @import "_download";
 @import "_news-events";
+@import "_cskh";
+@import "_store";
 
 $mainColor: #36bdf8;
 $textMainColor: #121d26;
@@ -13,21 +15,94 @@ $textDescColor: #212529;
   padding: 16px;
 }
 
-.page-name {
-  font-size: 32px;
-  font-weight: 700;
-  color: $textMainColor;
-  margin-bottom: 1%;
+.page-header {
+  margin-bottom: 15%;
+  @include tablet {
+    margin-bottom: 10%;
+  }
   @include desktop {
-    font-size: 50px;
+    margin-bottom: 5%;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10%;
+    @include tablet {
+      margin-bottom: 7%;
+    }
+    @include desktop {
+      margin-bottom: 4%;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $textMainColor;
+      margin-bottom: 1%;
+      @include tablet {
+        font-size: 36px;
+      }
+      @include desktop {
+        font-size: 50px;
+      }
+    }
+    
+    
+  }
+ &__desc {
+    font-size: 20px;
+    font-weight: 500;
+    color: $textDescColor;
+    @include desktop {
+      font-size: 24px;
+    }
+    }
+}
+
+.tab {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10%;
+  @include tablet {
+    margin-bottom: 7%;
+  }
+
+  @include desktop {
+    margin-bottom: 4%;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 20px;
+    transition: 0.3s;
+    min-width: 100px;
+
+    &:hover,
+    &.active {
+      background-color: $mainColor;
+      color: $textWhite;
+      border-radius: 65px;
+    }
   }
 }
 
-.page-desc {
-font-size: 20px;
-font-weight: 500;
-color: $textDescColor;
-@include desktop {
-  font-size: 24px;
+.tabcontent {
+  display: none;
+  color: $textBlack;
+  animation: fadeEffect 1s;
 }
+
+.tabcontent-active {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,26 @@
+@import "reponsive";
+
+$bgContainerColor: #f8f8f8;
+$textMainColor: #121d26;
+$timeColor: #A0A5A8;
+
+@mixin containerBase {
+    background-color: $bgContainerColor;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.notifi-item {
+    @include containerBase;
+    &__title {
+        color: $textMainColor;
+    }
+    &__time {
+        color: $timeColor;
+    }
+}

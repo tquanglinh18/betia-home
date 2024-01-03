@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betia Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles-scss.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+  </head>
+  <body>
+    <section class="container-page">
+     <div class="page-header">
+      <div class="page-header__title">
+        <div class="">
+          <img src="./assets/images/ic_news_title.png" alt="">
+        </div>
+        <h1>Tin tức - Sự kiện</h1>
+      </div>
+      <p class="page-header__desc"></p>
+     </div>
+
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'events')">
+          Sự kiện
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'news')">
+          Tin tức
+        </button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="events" class="tabcontent tabcontent-active">
+        <div class="filter">
+          <div class="filter__selected">
+            <p class="filter__selected--title">Bộ lọc</p>
+            <div class="filter__selected--dropdown-icon">
+              <img src="./assets/images/ic_dropdown.png" alt="" class=""/>
+            </div>
+          </div>
+          <div class="filter__option hidden">
+            <ul>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="events">
+          <a href="" class="event-item">
+            <div class="event-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="event-item__detail">
+              <div class="">
+                <div class="event-item__detail--type">
+                  <p>Tin mới</p>
+                  <div class="event-item__detail--type__dot"></div>
+                </div>
+                <h3 class="event-item__detail--title">
+                  Betia Family's day: giúp con làm chủ kỹ năng anh ngữ
+                </h3>
+              </div>
+              <div class="">
+                <div class="event-item__detail--author">
+                  <img
+                    src="./assets/images/ic_betia_1.png"
+                    alt=""
+                    class="event-item__detail--author-avatar"
+                  />
+                  <p class="event-item__detail--author-name">Dino</p>
+                </div>
+                <p class="event-item__detail--time">26/12/2000</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="event-item">
+            <div class="event-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="event-item__detail">
+              <div class="">
+                <div class="event-item__detail--type">
+                  <p>Tin mới</p>
+                  <div class="event-item__detail--type__dot"></div>
+                </div>
+                <h3 class="event-item__detail--title">
+                  Betia Family's day: giúp con làm chủ kỹ năng anh ngữ
+                </h3>
+              </div>
+              <div class="">
+                <div class="event-item__detail--author">
+                  <img
+                    src="./assets/images/ic_betia_1.png"
+                    alt=""
+                    class="event-item__detail--author-avatar"
+                  />
+                  <p class="event-item__detail--author-name">Dino</p>
+                </div>
+                <p class="event-item__detail--time">26/12/2000</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="event-item">
+            <div class="event-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="event-item__detail">
+              <div class="">
+                <div class="event-item__detail--type">
+                  <p>Tin mới</p>
+                  <div class="event-item__detail--type__dot"></div>
+                </div>
+                <h3 class="event-item__detail--title">
+                  Betia Family's day: giúp con làm chủ kỹ năng anh ngữ
+                </h3>
+              </div>
+              <div class="">
+                <div class="event-item__detail--author">
+                  <img
+                    src="./assets/images/ic_betia_1.png"
+                    alt=""
+                    class="event-item__detail--author-avatar"
+                  />
+                  <p class="event-item__detail--author-name">Dino</p>
+                </div>
+                <p class="event-item__detail--time">26/12/2000</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="" class="event-item">
+            <div class="event-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="event-item__detail">
+              <div class="">
+                <div class="event-item__detail--type">
+                  <p>Tin mới</p>
+                  <div class="event-item__detail--type__dot"></div>
+                </div>
+                <h3 class="event-item__detail--title">
+                  Betia Family's day: giúp con làm chủ kỹ năng anh ngữ
+                </h3>
+              </div>
+              <div class="">
+                <div class="event-item__detail--author">
+                  <img
+                    src="./assets/images/ic_betia_1.png"
+                    alt=""
+                    class="event-item__detail--author-avatar"
+                  />
+                  <p class="event-item__detail--author-name">Dino</p>
+                </div>
+                <p class="event-item__detail--time">26/12/2000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div id="news" class="tabcontent">
+        <div class="filter">
+          <div class="filter__selected">
+            <p class="filter__selected--title">Bộ lọc</p>
+            <div class="filter__selected--dropdown-icon">
+              <img src="./assets/images/ic_dropdown.png" alt="" class=""/>
+            </div>
+          </div>
+          <div class="filter__option hidden">
+            <ul>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+              <li class="filter__option--item"><a href="">Hello</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="news">
+          <a href="" class="news-item">
+            <div class="news-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="news-item__detail">
+              <p class="news-item__detail--type">Mới nhất</p>
+              <h3 class="news-item__detail--title">
+                [호두 소식] 호두 포인트 100% 활 용 백서!
+              </h3>
+              <p class="news-item__detail--time">01.02.2023</p>
+            </div>
+          </a>
+          <a href="" class="news-item">
+            <div class="news-item__banner">
+              <img
+                src="https://ik.imagekit.io/tvlk/blog/2023/07/canh-dep-thien-nhien-Viet-Nam-8-1024x594.jpg"
+                alt=""
+              />
+            </div>
+            <div class="news-item__detail">
+              <p class="news-item__detail--type">Mới nhất</p>
+              <h3 class="news-item__detail--title">
+                [호두 소식] 호두 포인트 100% 활 용 백서!
+              </h3>
+              <p class="news-item__detail--time">01.02.2023</p>
+            </div>
+          </a>
+
+          <a href="" class="news-item">
+            <div class="news-item__banner">
+              <img
+                src="https://img.lovepik.com/photo/48004/5949.jpg_wh860.jpg"
+                alt=""
+              />
+            </div>
+            <div class="news-item__detail">
+              <p class="news-item__detail--type">Mới nhất</p>
+              <h3 class="news-item__detail--title">
+                [호두 소식] 호두 포인트 100% 활 용 백서!
+              </h3>
+              <p class="news-item__detail--time">01.02.2023</p>
+            </div>
+          </a>
+          <a href="" class="news-item">
+            <div class="news-item__banner">
+              <img src="./assets/images/ic_betia_1.png" alt="" />
+            </div>
+            <div class="news-item__detail">
+              <p class="news-item__detail--type">Mới nhất</p>
+              <h3 class="news-item__detail--title">
+                [호두 소식] 호두 포인트 100% 활 용 백서!
+              </h3>
+              <p class="news-item__detail--time">01.02.2023</p>
+            </div>
+          </a>
+          <a href="" class="news-item">
+            <div class="news-item__banner">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1533427237i/41046229.jpg"
+                alt=""
+              />
+            </div>
+            <div class="news-item__detail">
+              <p class="news-item__detail--type">Mới nhất</p>
+              <h3 class="news-item__detail--title">
+                [호두 소식] 호두 포인트 100% 활 용 백서!
+              </h3>
+              <p class="news-item__detail--time">01.02.2023</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

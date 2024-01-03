@@ -10,8 +10,20 @@
 @media screen and (min-width: 1289px) {
 }
 
-.img-app {
-    background-image: url('../images/ic_betia_1.webp.png');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fontsMyriadPro-Regular.eot');
+    src: url('../fontsMyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Regular.woff') format('woff'),
+        url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: Myriad Pro;
+    font-weight: normal;
+    font-style: normal;
 }

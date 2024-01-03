@@ -5,50 +5,69 @@ $textMainColor: #121d26;
 $textWhite: #fff;
 $textBlack: #000;
 $dotColor: #f63b2c;
-$bgNewsItemColor: #F8F8F8;
+$bgContainerColor: #f8f8f8;
 $radiusBase: 50px;
 
-.tab {
+.filter {
+  margin-bottom: 6%;
   display: flex;
-  gap: 12px;
-  margin-bottom: 4%;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  position: relative;
+  min-width: 100px;
+  @include tablet {
+    min-width: 140px;
+    margin-bottom: 2%;
+  }
+  &__selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgContainerColor;
+    padding: 8px 20px;
+    border-radius: 50px;
+    gap: 4px;
+    &--title {
+      color: $textMainColor;
+      font-weight: 600;
+    }
+    &--dropdown-icon {
+      height: 28px;
+      width: 28px;
+      border-radius: 999px;
+      aspect-ratio: 1/1;
+      padding: 10px;
+      background-color: #fff;
+      img {
+        animation: mymove 0.5s;
+      }
+    }
+  }
 
-  button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 6px 20px;
-    transition: 0.3s;
+  &__option {
+    position: absolute;
+    top: 110%;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: $mainColor;
+    color: $textWhite;
     min-width: 100px;
-
-    &:hover,
-    &.active {
-      background-color: $mainColor;
-      color: $textWhite;
-      border-radius: 65px;
+    animation: name 0.3 linear;
+    @include tablet {
+      min-width: 140px;
+    }
+    &--item {
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 6px;
     }
   }
 }
 
-.tabcontent {
-  display: none;
-  color: $textBlack;
-  animation: fadeEffect 1s;
+@keyframes mymove {
+  50% {transform: rotate(180deg);}
 }
-
-.tabcontent-active {
-  display: block;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .event-item {
   box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -91,7 +110,7 @@ $radiusBase: 50px;
 
   &__detail {
     width: 100%;
-    padding: 8%;
+    padding: 10%;
     @include tablet {
       width: 50%;
       padding: 4%;
@@ -157,21 +176,22 @@ $radiusBase: 50px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   @include tablet {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  row-gap: 2%;
-  column-gap: 4%;
-  } @include desktop {
+    row-gap: 2%;
+    column-gap: 4%;
+  }
+  @include desktop {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 4%;
     column-gap: 4%;
   }
   .news-item {
-    background-color: $bgNewsItemColor;
+    background-color: $bgContainerColor;
     border-radius: $radiusBase;
     &__banner {
       width: 100%;
       img {
         width: 100%;
-      aspect-ratio: 4/3;
+        aspect-ratio: 4/3;
 
         object-fit: cover;
         border-top-left-radius: 50px;
@@ -179,7 +199,7 @@ $radiusBase: 50px;
       }
     }
     &__detail {
-      padding: 30px;
+      padding: 10%;
       &--type {
         color: #b8bbbe;
         font-weight: 600;
