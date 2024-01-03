@@ -373,8 +373,8 @@ body {
 }
 
 .banner-slick {
-  margin-bottom: 6%;
-  margin-top: 6%;
+  margin-bottom: 4%;
+  margin-top: 4%;
 }
 
 .products-list {
@@ -382,6 +382,8 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 32px;
   column-gap: 32px;
+  margin-bottom: 4%;
+  margin-top: 4%;
 }
 @media (min-width: 768px) {
   .products-list {
@@ -443,6 +445,104 @@ body {
   color: #a0a5a8;
   font-size: 16px;
   text-decoration: line-through;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+.product__detail {
+  width: 60%;
+}
+.product__detail--item {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 16px;
+}
+.product__detail--item img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.product__payment {
+  width: 35%;
+  color: #121d26;
+  position: sticky;
+}
+.product__payment--name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+.product__payment--type-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10%;
+}
+.product__payment--type-item {
+  padding: 8px 16px;
+  background-color: #f3f4f4;
+  font-weight: 600;
+  border-radius: 50px;
+}
+.product__payment li {
+  margin-bottom: 4px;
+}
+.product__payment--infor-payment {
+  padding: 30px;
+  background: #f8f8f8;
+  border-radius: 50px;
+}
+.product__payment--line-space {
+  height: 1px;
+  border-radius: 10px;
+  background-color: #e7e8e9;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.product__payment--voucher-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.product__payment--voucher-code {
+  display: flex;
+  gap: 4px;
+}
+.product__payment--voucher-code input {
+  width: 65%;
+  background: #ecedee;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.product__payment--voucher-code button,
+.product__payment--voucher-code a {
+  width: 30%;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.product__payment--price {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.product__payment--price-sale {
+  font-size: 32px;
+  font-weight: 700;
+}
+.product__payment--price-cost {
+  text-decoration: line-through;
+  color: #a0a5a8;
+}
+.product__payment--buy-button {
+  width: 100%;
+  background-color: #36bdf8;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 50px;
 }
 
 .container-page {
