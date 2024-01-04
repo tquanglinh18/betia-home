@@ -10,18 +10,22 @@ $mainColor: #36bdf8;
 $textMainColor: #121d26;
 $textDescColor: #212529;
 
-
 body {
-  background-color: #F8F8F8;
+  background-color: #fff;
 }
 .container-page {
   max-width: 1260px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-top: 16px;
 }
 
 .page-header {
   margin-bottom: 15%;
+  display: flex;
+  align-items: center;
   @include tablet {
     margin-bottom: 10%;
   }
@@ -43,7 +47,6 @@ body {
       font-size: 24px;
       font-weight: 700;
       color: $textMainColor;
-      margin-bottom: 1%;
       @include tablet {
         font-size: 36px;
       }
@@ -51,17 +54,15 @@ body {
         font-size: 50px;
       }
     }
-    
-    
   }
- &__desc {
+  &__desc {
     font-size: 20px;
     font-weight: 500;
     color: $textDescColor;
     @include desktop {
       font-size: 24px;
     }
-    }
+  }
 }
 
 .tab {

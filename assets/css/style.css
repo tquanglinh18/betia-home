@@ -560,6 +560,10 @@ video {
   top: 0px;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .mb-\[8\%\] {
   margin-bottom: 8%;
 }
@@ -578,6 +582,18 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.pt-\[6\%\] {
+  padding-top: 6%;
+}
+
+.pt-\[10\%\] {
+  padding-top: 10%;
+}
+
+.pt-\[20\%\] {
+  padding-top: 20%;
 }
 
 .filter {

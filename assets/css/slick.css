@@ -144,6 +144,10 @@
   opacity: 0.4;
 }
 
+.banner-slick .slick-active {
+  opacity: 1;
+}
+
 .product__detail .slick-dots {
   display: flex;
   justify-content: center;
