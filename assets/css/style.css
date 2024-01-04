@@ -548,6 +548,18 @@ video {
   position: static;
 }
 
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .mb-\[8\%\] {
   margin-bottom: 8%;
 }
@@ -556,8 +568,16 @@ video {
   display: none;
 }
 
-.overflow-auto {
-  overflow: auto;
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[1345px\] {
+  max-width: 1345px;
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .filter {

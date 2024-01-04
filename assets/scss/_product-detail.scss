@@ -9,11 +9,17 @@ $textCostColor: #a0a5a8;
 $bgContainerColor: #f8f8f8;
 
 .product {
-  display: flex;
-  justify-content: space-between;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__detail {
-    width: 60%;
+    width: 100%;
+    overflow: auto;
+    @include desktop {
+      width: 65%;
+    }
     &--item {
       width: 100%;
       aspect-ratio: 1/1;
@@ -24,12 +30,40 @@ $bgContainerColor: #f8f8f8;
         aspect-ratio: 1/1;
       }
     }
+    .product__infor {
+      display: block;
+       @include desktop {
+        display: none;
+       }
+    }
   }
 
   &__payment {
-    width: 35%;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: $bgContainerColor;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    padding: 20px;
+    @include desktop {
+      width: 35%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      background-color: transparent;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+    }
     color: $textMainColor;
-    position: sticky;
+    .product__infor {
+      display: none;
+       @include desktop {
+        display: block;
+       }
+    }
     &--name {
       font-size: 24px;
       font-weight: 700;
@@ -53,7 +87,7 @@ $bgContainerColor: #f8f8f8;
       margin-bottom: 4px;
     }
 
-    &--infor-payment {
+    &--infor {
       padding: 30px;
       background: $bgContainerColor;
       border-radius: $borderRadiusBase;
@@ -75,7 +109,7 @@ $bgContainerColor: #f8f8f8;
 
     &--voucher-code {
       display: flex;
-      gap: 4px;
+      justify-content: space-between;
       input {
         width: 65%;
         background: #ecedee;
@@ -86,9 +120,12 @@ $bgContainerColor: #f8f8f8;
       button,
       a {
         width: 30%;
-        padding: 10px 20px;
+        padding: 4px 10px;
         background-color: #fff;
         border-radius: 50px;
+        @include tablet {
+          padding: 10px 20px;
+        }
       }
     }
 
@@ -97,17 +134,24 @@ $bgContainerColor: #f8f8f8;
       align-items: end;
       gap: 16px;
       margin-bottom: 16px;
-      &-sale {
-        font-size: 32px;
+      &__sale {
+        font-size: 28px;
         font-weight: 700;
+        @include tablet {
+          font-size: 32px;
+        }
       }
-      &-cost {
+      &__cost {
         text-decoration: line-through;
         color: $textCostColor;
+        font-size: 16px;
+        @include tablet {
+          font-size: 20px;
+        }
       }
     }
 
-    &--buy-button {
+    &__buy-button {
       width: 100%;
       background-color: $mainColor;
       color: #fff;

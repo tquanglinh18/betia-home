@@ -30,7 +30,7 @@ $(function () {
     ],
   });
 
-  $(".product__detail").slick({
+  $(".product__detail--banner").slick({
     dots: true,
     infinite: true,
     speed: 1000,

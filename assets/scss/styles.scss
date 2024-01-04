@@ -1,4 +1,5 @@
 @import "reponsive";
+@import "_home";
 @import "_download";
 @import "_news-events";
 @import "_cskh";
@@ -9,11 +10,14 @@ $mainColor: #36bdf8;
 $textMainColor: #121d26;
 $textDescColor: #212529;
 
+
+body {
+  background-color: #F8F8F8;
+}
 .container-page {
   max-width: 1260px;
   margin-right: auto;
   margin-left: auto;
-  padding: 16px;
 }
 
 .page-header {
