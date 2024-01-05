@@ -10,9 +10,14 @@ $textBlueColor: #31aadf;
   flex-direction: column;
   background-color: #f8f8f8;
   border-radius: 50px;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
   @include tablet {
     flex-direction: row;
+    margin-bottom: 6%;
+  }
+
+  @include desktop {
+    margin-bottom: 4%;
   }
 
   &__banner {
@@ -72,6 +77,7 @@ $textBlueColor: #31aadf;
     &-download {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       gap: 16px;
       @include tablet {
         flex-direction: row;
@@ -174,6 +180,8 @@ $textBlueColor: #31aadf;
     &-download {
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
+
       gap: 16px;
       @include tablet {
         flex-direction: row;

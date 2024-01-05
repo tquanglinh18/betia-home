@@ -1,0 +1,83 @@
+@import "reponsive";
+
+$textMainColor: #121d26;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__more {
+    @include flex-center();
+
+    gap: 24px;
+    &--option {
+      @include flex-center();
+      flex-direction: column;
+    }
+  }
+
+  &__contacts-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $textMainColor;
+    padding: 4px;
+    border-radius: 50px;
+    &--ic-dino {
+      width: 48px;
+      img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
+      }
+    }
+    p {
+      line-height: 1.5;
+      font-weight: 700;
+      padding-left: 16px;
+      padding-right: 16px;
+      color: white;
+    }
+  }
+
+  &__right {
+    @include flex-center();
+
+    gap: 24px;
+  }
+
+  &__center {
+    @include flex-center();
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 16px;
+    &--item {
+      @include flex-center();
+      cursor: pointer;
+      position: relative;
+      gap: 8px;
+      height: 80px;
+      p {
+        font-weight: 700;
+        color: $textMainColor;
+      }
+      img {
+        width: 12px;
+      }
+      &__sub-menu {
+        position: absolute;
+        top: 80px;
+      }
+    }
+  }
+}
