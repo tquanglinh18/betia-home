@@ -548,10 +548,6 @@ video {
   position: static;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .relative {
   position: relative;
 }
@@ -560,32 +556,20 @@ video {
   position: sticky;
 }
 
-.top-0 {
-  top: 0px;
+.top-\[80px\] {
+  top: 80px;
 }
 
-.bottom-\[5\%\] {
-  bottom: 5%;
+.z-50 {
+  z-index: 50;
 }
 
-.right-\[3\%\] {
-  right: 3%;
-}
-
-.z-40 {
-  z-index: 40;
+.z-0 {
+  z-index: 0;
 }
 
 .mb-\[8\%\] {
   margin-bottom: 8%;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .flex {
@@ -596,46 +580,12 @@ video {
   display: none;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-.h-\[48px\] {
-  height: 48px;
-}
-
 .w-full {
   width: 100%;
 }
 
-.w-\[42px\] {
-  width: 42px;
-}
-
-.w-\[48px\] {
-  width: 48px;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-\[100\%\] {
-  width: 100%;
-}
-
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-
 .max-w-\[1345px\] {
   max-width: 1345px;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .flex-col {
@@ -650,70 +600,14 @@ video {
   justify-content: center;
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .bg-transparent {
   background-color: transparent;
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .pt-\[20\%\] {
   padding-top: 20%;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
-}
-
-.text-\[18px\] {
-  font-size: 18px;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-@media (min-width: 768px) {
-  .md\:h-\[64px\] {
-    height: 64px;
-  }
-
-  .md\:w-\[64px\] {
-    width: 64px;
-  }
 }

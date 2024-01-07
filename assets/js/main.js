@@ -44,8 +44,8 @@ $(function () {
 function openTab(evt, tabName) {
   var idTabSelected = "#".concat(tabName);
   var currentTarget = evt.currentTarget;
-  $(".tabcontent").hide().removeClass("tabcontent-active");
+  $(".tab-content").hide().removeClass("tab-content__active");
   $(".tablinks").removeClass("active");
-  $(idTabSelected).show().addClass("tabcontent-active");
+  $(idTabSelected).show().addClass("tab-content__active");
   $(currentTarget).addClass("active");
 }

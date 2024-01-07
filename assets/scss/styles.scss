@@ -75,8 +75,9 @@ body {
     width: 100%;
     margin-bottom: 10%;
     @include tablet {
-      margin-bottom:8%;
-    } @include desktop {
+      margin-bottom: 8%;
+    }
+    @include desktop {
       margin-bottom: 6%;
     }
     @include desktop {
@@ -114,14 +115,13 @@ body {
   }
 }
 
-.tabcontent {
+.tab-content {
   display: none;
   color: $textBlack;
   animation: fadeEffect 1s;
-}
-
-.tabcontent-active {
-  display: block;
+  &--active {
+    display: block;
+  }
 }
 
 @keyframes fadeEffect {

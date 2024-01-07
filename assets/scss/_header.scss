@@ -9,15 +9,23 @@ $textMainColor: #121d26;
 }
 
 .header {
-  padding: 8px;
+  padding: 16px;
+  height: 96px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include desktop {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   &__more {
-    @include flex-center();
-
+    display: none;
+    @include desktop {
+      @include flex-center();
+    }
     gap: 24px;
     &--option {
       @include flex-center();
@@ -33,7 +41,10 @@ $textMainColor: #121d26;
     padding: 4px;
     border-radius: 50px;
     &--ic-dino {
-      width: 48px;
+      width: 32px;
+      @include tablet {
+        width: 48px;
+      }
       img {
         object-fit: cover;
         width: 100%;
@@ -51,18 +62,25 @@ $textMainColor: #121d26;
 
   &__right {
     @include flex-center();
-
-    gap: 24px;
+    gap: 8px;
+    @include tablet {
+      gap: 16px;
+    }
+    @include desktop {
+      gap: 24px;
+    }
   }
 
   &__center {
-    @include flex-center();
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 16px;
+    display: none;
+    @include desktop {
+      @include flex-center();
+    }
+
     &--item {
       @include flex-center();
+      padding-right: 16px;
+      padding-left: 16px;
       cursor: pointer;
       position: relative;
       gap: 8px;
@@ -74,10 +92,19 @@ $textMainColor: #121d26;
       img {
         width: 12px;
       }
-      &__sub-menu {
-        position: absolute;
-        top: 80px;
-      }
+    }
+  }
+
+  &__menu-mobile {
+    display: block;
+    width: 48px;
+    height: 48px;
+    @include desktop {
+      display: none;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
     }
   }
 }
