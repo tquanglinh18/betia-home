@@ -1,0 +1,35 @@
+@import "reponsive";
+
+$textMainColor: #121d26;
+
+footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: $textMainColor;
+  &__column {
+    display: flex;
+    flex-direction: column;
+    &--title {
+      font-weight: 700;
+      line-height: 2;
+      margin-bottom: 24px;
+      opacity: 0.8;
+    }
+    ul {
+      margin-bottom: 8px;
+      li {
+        margin-bottom: 4px;
+      }
+    }
+    &--highlight {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+  }
+}

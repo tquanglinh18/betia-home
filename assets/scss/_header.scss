@@ -1,7 +1,6 @@
 @import "reponsive";
 
 $textMainColor: #121d26;
-
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -9,17 +8,33 @@ $textMainColor: #121d26;
 }
 
 .header {
-  padding: 16px;
-  height: 96px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 60px;
+  @include tablet {
+    height: 80px;
+  }
   @include desktop {
+    height: 96px;
     padding-left: 48px;
     padding-right: 48px;
   }
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  &__left {
+    img {
+      width: 70%;
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
 
   &__more {
     display: none;
@@ -41,7 +56,10 @@ $textMainColor: #121d26;
     padding: 4px;
     border-radius: 50px;
     &--ic-dino {
-      width: 32px;
+      width: 24px;
+      @include tablet {
+        width: 36px;
+      }
       @include tablet {
         width: 48px;
       }
@@ -57,6 +75,10 @@ $textMainColor: #121d26;
       padding-left: 16px;
       padding-right: 16px;
       color: white;
+      font-size: 14px;
+      @include tablet {
+        font-size: 16px;
+      }
     }
   }
 
@@ -76,7 +98,6 @@ $textMainColor: #121d26;
     @include desktop {
       @include flex-center();
     }
-
     &--item {
       @include flex-center();
       padding-right: 16px;
@@ -97,8 +118,12 @@ $textMainColor: #121d26;
 
   &__menu-mobile {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
+    @include tablet {
+      width: 36px;
+      height: 36px;
+    }
     @include desktop {
       display: none;
     }
@@ -106,5 +131,38 @@ $textMainColor: #121d26;
       width: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.sub-menu {
+  width: 100%;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  &__products {
+    display: flex;
+    margin-right: 16px;
+    margin-left: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2);
+
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
   }
 }
