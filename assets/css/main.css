@@ -11,19 +11,64 @@
 }
 
 @font-face {
-    font-family: 'Myriad Pro';
-    src: url('../fontsMyriadPro-Regular.eot');
-    src: url('../fontsMyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
-        url('../fonts/MyriadPro-Regular.woff') format('woff'),
-        url('../fonts/MyriadPro-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("../fontsMyriadPro-Regular.eot");
+  src: url("../fontsMyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MyriadPro-Regular.woff2") format("woff2"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff"),
+    url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    font-family: Myriad Pro;
-    font-weight: normal;
-    font-style: normal;
+  font-family: Myriad Pro;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.active {
+  display: block;
+}
+
+.dropdown-rotate {
+  rotate: 180deg;
+  animation: rotateDropdown 0.2s linear;
+}
+
+.no-dropdown-rotate {
+  animation: noRotateDropdown 0.2s linear;
+}
+
+@keyframes noRotateDropdown {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 180deg;
+  }
+}
+
+@keyframes rotateDropdown {
+  0% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes fadeBottomToTop {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

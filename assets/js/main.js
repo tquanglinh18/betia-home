@@ -1,4 +1,22 @@
 $(function () {
+  $(".header__menu-mobile").click(() => {
+    if ($(".header-mobile")[0].classList.contains("header-mobile--active")) {
+      $(".header-mobile")
+        .addClass("header-mobile--hide")
+        .removeClass("header-mobile--active");
+      setTimeout(() => {
+        $(".header-mobile").css({
+          display: "none",
+        });
+      }, 500);
+    } else {
+      $(".header-mobile")
+        .removeClass("header-mobile--hide")
+        .addClass("header-mobile--active")
+        .show();
+    }
+  });
+
   $(".filter__selected").click(() => {
     $(".filter__option").toggleClass("hidden");
     $(".filter__selected--dropdown-icon img").toggleClass("rotate-180");
@@ -39,6 +57,57 @@ $(function () {
     slidesToShow: 1,
     arrows: false,
   });
+
+  const listBtnMenuParent = document.querySelectorAll(".btn-menu-parent");
+  const listSubmenu = document.querySelectorAll(".sub-menu");
+  const listDropDown = document.querySelectorAll(".dropdown");
+
+  for (let i = 0; i < listBtnMenuParent.length; i++) {
+    listBtnMenuParent[i].setAttribute("id", `btn-menu-parent-${i + 1}`);
+    listBtnMenuParent[i].addEventListener("click", () => {
+      var cssQuerry =
+        "#" + listBtnMenuParent[i].getAttribute("id") + " .sub-menu__products";
+
+      if (!listBtnMenuParent[i].classList.contains("active")) {
+        $(cssQuerry).each((index, item) => {
+          $(item).css({
+            "animation-delay": index * 0.3 + 0.3 + "s",
+          });
+          setTimeout(() => {
+            $(item).css({
+              opacity: 1,
+            });
+          }, (index * 0.3 + 0.3) * 1000);
+        });
+        for (var j = 0; j < listBtnMenuParent.length; j++) {
+          listBtnMenuParent[j].classList.remove("active");
+          listDropDown[j].classList.replace(
+            "dropdown-rotate",
+            "no-dropdown-rotate"
+          );
+          listSubmenu[j].classList.add("hidden");
+        }
+        listBtnMenuParent[i].classList.add("active");
+        listSubmenu[i].classList.remove("hidden");
+        listDropDown[i].classList.replace(
+          "no-dropdown-rotate",
+          "dropdown-rotate"
+        );
+      } else {
+        for (var j = 0; j < listBtnMenuParent.length; j++) {
+          listBtnMenuParent[j].classList.remove("active");
+        }
+        listSubmenu[i].classList.add("hidden");
+        listDropDown[i].classList.replace(
+          "dropdown-rotate",
+          "no-dropdown-rotate"
+        );
+        $(cssQuerry).each((index, item) => {
+          $(item).removeAttr("style");
+        });
+      }
+    });
+  }
 });
 
 function openTab(evt, tabName) {

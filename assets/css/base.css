@@ -1,0 +1,28 @@
+.dropdown-rotate {
+  animation: rotateDropdown 0.2s linear;
+}
+
+.no-dropdown-rotate {
+  animation: noRotateDropdown 0.2s linear;
+}
+
+@keyframes noRotateDropdown {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 180deg;
+  }
+}
+
+@keyframes rotateDropdown {
+  0% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+

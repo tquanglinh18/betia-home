@@ -46,13 +46,19 @@ $blueColor: #3399ff;
 
   &__banner {
     position: sticky;
-    top: 80px;
+    top: 60px;
+    @include tablet {
+      top: 80px;
+    }
+    @include desktop {
+      top: 96px;
+    }
     z-index: 0;
   }
 
   &__contents {
     position: relative;
-    z-index: 999;
+    z-index: 888;
   }
 }
 
@@ -547,10 +553,13 @@ $blueColor: #3399ff;
       &__banner {
         width: 100%;
         position: sticky;
-        top: 80px;
+        top: 96px;
         z-index: 0;
         @include tablet {
           width: 67%;
+        }
+        @include desktop {
+          top: 100px;
         }
         margin-left: 16px;
       }
