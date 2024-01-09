@@ -19,7 +19,6 @@
         </div>
         <h1>Tin tức - Sự kiện</h1>
       </div>
-      <p class="page-header__desc"></p>
      </div>
 
       <!-- Tab links -->
@@ -33,12 +32,12 @@
       </div>
 
       <!-- Tab content -->
-      <div id="events" class="tab-content tab-content__active">
-        <div class="filter">
+      <div id="events" class="tab-content tab-content--active">
+        <div id="events-filter" class="filter">
           <div class="filter__selected">
             <p class="filter__selected--title">Bộ lọc</p>
             <div class="filter__selected--dropdown-icon">
-              <img src="./assets/images/ic_dropdown.png" alt="" class=""/>
+              <img src="./assets/images/ic_dropdown.png" alt="" class="no-dropdown-rotate"/>
             </div>
           </div>
           <div class="filter__option hidden">
@@ -165,11 +164,11 @@
       </div>
 
       <div id="news" class="tab-content">
-        <div class="filter">
-          <div class="filter__selected">
+        <div id="news-filter" class="filter">
+          <div  class="filter__selected">
             <p class="filter__selected--title">Bộ lọc</p>
             <div class="filter__selected--dropdown-icon">
-              <img src="./assets/images/ic_dropdown.png" alt="" class=""/>
+              <img src="./assets/images/ic_dropdown.png" alt="" class="no-dropdown-rotate"/>
             </div>
           </div>
           <div class="filter__option hidden">
@@ -180,6 +179,7 @@
             </ul>
           </div>
         </div>
+
         <div class="news">
           <a href="" class="news-item">
             <div class="news-item__banner">

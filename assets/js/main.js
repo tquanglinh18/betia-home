@@ -17,9 +17,16 @@ $(function () {
     }
   });
 
-  $(".filter__selected").click(() => {
-    $(".filter__option").toggleClass("hidden");
-    $(".filter__selected--dropdown-icon img").toggleClass("rotate-180");
+  $(".filter").each((index, item) => {
+    $(item).click(() => {
+      var cssQuerryFilterSelected =
+        "#" + $(item).attr("id") + " .filter__option";
+      $(cssQuerryFilterSelected).toggleClass("hidden");
+      console.log(cssQuerryFilterSelected);
+      $("#" + $(item).attr("id") + " .filter__selected--dropdown-icon img")
+        .toggleClass("no-dropdown-rotate")
+        .toggleClass("dropdown-rotate");
+    });
   });
 
   $(".banner-slick").slick({
@@ -113,8 +120,18 @@ $(function () {
 function openTab(evt, tabName) {
   var idTabSelected = "#".concat(tabName);
   var currentTarget = evt.currentTarget;
-  $(".tab-content").hide().removeClass("tab-content__active");
+  $(".tab-content").hide().removeClass("tab-content--active");
   $(".tablinks").removeClass("active");
-  $(idTabSelected).show().addClass("tab-content__active");
+  $(idTabSelected).show().addClass("tab-content--active");
   $(currentTarget).addClass("active");
+  if (!$(".filter").hasClass("hidden")) {
+    $(".filter .filter__option").addClass("hidden");
+  }
+  if (
+    $(".filter__selected--dropdown-icon img").hasClass("no-dropdown-rotate")
+  ) {
+    $(".filter__selected--dropdown-icon img")
+      .addClass("no-dropdown-rotate")
+      .removeClass("dropdown-rotate");
+  }
 }

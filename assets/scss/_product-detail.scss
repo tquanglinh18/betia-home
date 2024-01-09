@@ -20,6 +20,17 @@ $bgContainerColor: #f8f8f8;
     @include desktop {
       width: 65%;
     }
+
+    &--banner{
+      margin-bottom: 8%;
+    }
+
+    &--desc {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
     &--item {
       width: 100%;
       aspect-ratio: 1/1;
